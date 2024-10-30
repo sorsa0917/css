@@ -4,20 +4,25 @@ body{
     font-weight: 400;
     line-height: 1.4;
     color: #333;
+    height: 4000px;
 }
 a {
     text-decoration: none;
 }
-
-header {
-    background-color: rgb(219, 219, 219);
+img {
+    display: block;
 }
-header .inner {
-    background-color: rgb(192, 192, 192);
+.inner{
     width: 1100px;
-    height: 120px;
     margin: 0 auto;
     position: relative;
+}
+
+header {
+    background-color: #F6F5F0;
+}
+header > .inner {
+    height: 120px;
 }
 header .logo {
     height: 75px;
@@ -92,4 +97,84 @@ header .sub-menu .search .material-icons {
     right: 5px;
     margin: auto;
     transition:  .4s;
+}
+header .sub-menu .search.focused .material-icons{
+    opacity: 0;
+}
+header .main-menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+}
+header .main-menu .item .item__name {
+    padding: 10px 20px 34px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+header .main-menu .item:hover .item__name {
+    background-color: #2C2A29;
+    color: #EA9926;
+    border-radius: 6px 6px 0 0;
+}
+header .main-menu .item .item__contents {
+    background-color: orange;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+header .main-menu .item:hover .item__contents {
+    display: block;
+}
+header .main-menu .item .item__contents .contents__menu {
+    background-color: #2C2A29;
+}
+header .main-menu .item .item__contents .contents__menu > ul {
+    padding: 20px 0;
+    display: flex;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li {
+    width: 220px;
+}
+header .main-menu .item .item__contents .contents__menu >ul > li h4 {
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+    color: #fff;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+    padding:  5px 0;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+header .main-menu .item .item .contents__menu > ul > li ul li:hover {
+    color: #EA9926;
+}
+header .main-menu .item .item__contents .contents__texture {
+    padding: 26px 0;
+    font-size: 12px;
+    background-image: url("../images/main_menu_pattern.jpg");
+}
+header .main-menu .item .item__contents .contents__texture h4 {
+    color: #999;
+    font-weight: 900;
+}
+header .main-menu .item .item__contents .contents__texture p {
+    color: #EA9926;
+    margin: 4px 0 14px;
+}
+
+header .badges {
+    position: fixed;
+    top: 132px;
+    right: 12;
+}
+header .badges .badge {
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: inset 4px 4px 10px rgba(0,0,0,.15);
+    cursor: pointer;
+    overflow: hidden;
 }
